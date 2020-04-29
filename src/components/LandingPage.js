@@ -1,46 +1,22 @@
 import React, { Component } from "react";
 import "../App.css";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import RaisedButton from "material-ui/RaisedButton";
-
-const SignUp = () => <h1>SignUp</h1>;
-const SignIn = () => <h1>SignIn</h1>;
-
-const buttonStyle = {
-  margin: 20,
-  fontFamily: "Arial",
-};
-
-const headerStyle = {
-  color: "white",
-  backgroundColor: "DodgerBlue",
-  padding: "10px",
-  fontFamily: "Arial",
-};
+import { Link } from "react-router-dom";
 
 export class LandingPage extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <React.Fragment>
-          <h1 style={headerStyle}>Reflect on your day.</h1>
-
-          <RaisedButton
-            label="Sign Up"
-            style={buttonStyle}
-            onClick={this.continue}
-          />
-          <p>dasjfklsjd</p>
-          <Router>
-            <div>
-              <Link to="/signIn">Sign In</Link>{" "}
-              <Link to="/FormUserDetails" component={SignUp} />
-              <Link to="/signIn" component={SignIn} />
-            </div>
-          </Router>
-        </React.Fragment>
-      </MuiThemeProvider>
+      <div>
+        <body class="landingPage">
+          <h1 class="header">Reflect on your day.</h1>
+          <p class="subHeader">
+            Reflect daily with questions, calm your thinking, organize your
+            life.
+          </p>
+          <Link to="/components/UserForm">
+            <button class="signUpButton"> Sign Up </button>
+          </Link>
+        </body>
+      </div>
     );
   }
 }

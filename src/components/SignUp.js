@@ -4,7 +4,7 @@ import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaisedButton from "material-ui/RaisedButton";
 
-export class FormUserDetails extends Component {
+export class SignUp extends Component {
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -52,4 +52,4 @@ const styles = {
   },
 };
 
-export default FormUserDetails;
+export default SignUp;
