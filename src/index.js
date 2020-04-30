@@ -5,7 +5,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
@@ -16,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/framework-app" component={LandingPage} />
         <Route path="/components/UserForm" component={UserForm} />
         <Route path="/components/SignIn" component={SignIn} />
       </Switch>

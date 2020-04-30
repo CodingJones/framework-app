@@ -1,39 +1,52 @@
-body.landingPage {
-  background-color: #003e75;
+h2 {
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 36px;
+  color: #333;
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 300;
 }
 
 h1.header {
   /* Reflect on your day. */
 
   position: absolute;
-  width: 880px;
-  height: 100px;
-  left: 226px;
-  top: 245px;
+  left: 200px;
+  top: 250px;
 
-  font-family: Poppins;
+  font-family: "Source Sans Pro", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 72px;
-  line-height: 108px;
-  text-align: center;
+  font-size: 48px;
 
   color: #ffb236;
 }
 
 p.subHeader {
   /* Reflect daily with questions, calm your thinking, organize your life. */
-
   position: absolute;
-  width: 454px;
+  width: 400px;
   height: 200px;
-  left: 402px;
-  top: 366px;
+  left: 200px;
+  top: 350px;
 
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
+  font-family: "Montserrat";
+  font-size: 28px;
   line-height: 48px;
   text-align: center;
 
@@ -45,17 +58,85 @@ button.signUpButton {
   position: absolute;
   width: 350px;
   height: 80px;
-  left: 454px;
-  top: 587px;
+  left: 220px;
+  top: 500px;
 
   background: #ffb236;
   border-radius: 40px;
 
-  font-family: Poppins;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 48px;
-  color: rgba(0, 40, 119, 0.8);
+  color: #003e75;
   text-decoration: none;
+  border-style: none;
+}
+
+/* button change when hover and clicked */
+button.signUpButton:hover {
+  color: #e5e5e5;
+  background-color: #ee5254;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Log In */
+
+.navLogInButton {
+  position: absolute;
+  right: 140px;
+  top: 15px;
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  background: #003e75;
+  color: #e5e5e5;
+  border-style: none;
+
+  text-decoration: none;
+}
+
+/* button change when hover and clicked */
+.navLogInButton:hover {
+  color: #bebebe;
+  transition: width 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.navSignUpButton {
+  position: absolute;
+  right: 30px;
+  top: 15px;
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+
+  background: #003e75;
+  color: #e5e5e5;
+  padding: 10px 25px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+
+  text-decoration: none;
+}
+
+.navSignUpButton:hover {
+  color: #bebebe;
+  border: 1px solid #bebebe;
+  transition: width 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.racoonImg {
+  position: relative;
+  max-width: 500px;
+  right: 50px;
+  top: 200px;
+  border-radius: 100%;
 }
