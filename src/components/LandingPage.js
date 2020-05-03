@@ -18,7 +18,7 @@ export class LandingPage extends Component {
               Reflect daily with questions, calm your thinking, organize your
               life.
             </p>
-            <Link to="/components/UserForm">
+            <Link to="/components/SignUp">
               <button class="signUpButton"> Sign Up </button>
             </Link>
           </div>
@@ -27,7 +27,7 @@ export class LandingPage extends Component {
               <Link to="/components/SignIn">
                 <button class="navLogInButton"> Log In </button>
               </Link>
-              <Link to="/components/UserForm">
+              <Link to="/components/SignUp">
                 <button class="navSignUpButton"> Sign Up </button>
               </Link>
             </nav>
