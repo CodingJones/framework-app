@@ -3,18 +3,6 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import AppBar from "material-ui/AppBar";
 
 export class Success extends Component {
-  continue = (e) => {
-    e.preventDefault();
-
-    // Process form //
-    this.props.nextStep();
-  };
-
-  back = (e) => {
-    e.preventDefault();
-    this.props.prevStep();
-  };
-
   render() {
     return (
       <MuiThemeProvider>

@@ -9,7 +9,6 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import SignIn from "./components/SignIn";
-import UserForm from "./components/UserForm";
 import SignUp from "./components/SignUp";
 
 ReactDOM.render(
@@ -17,7 +16,6 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/framework-app" component={LandingPage} />
-        <Route path="/components/UserForm" component={UserForm} />
         <Route path="/components/SignIn" component={SignIn} />
         <Route path="/components/SignUp" component={SignUp} />
       </Switch>
