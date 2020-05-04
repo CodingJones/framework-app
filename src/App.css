@@ -69,7 +69,7 @@ button.signUpButton {
   font-weight: normal;
   font-size: 32px;
   line-height: 48px;
-  color: #003e75;
+  color: #0d47a1;
   text-decoration: none;
   border-style: none;
 }
@@ -77,7 +77,7 @@ button.signUpButton {
 /* button change when hover and clicked */
 button.signUpButton:hover {
   color: #e5e5e5;
-  background-color: #ee5254;
+  background-color: #f57c00;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -95,7 +95,7 @@ button.signUpButton:hover {
   align-items: center;
   text-align: center;
 
-  background: #003e75;
+  background: #0d47a1;
   color: #e5e5e5;
   border-style: none;
 
@@ -118,7 +118,7 @@ button.signUpButton:hover {
   align-items: center;
   text-align: center;
 
-  background: #003e75;
+  background: #0d47a1;
   color: #e5e5e5;
   padding: 10px 25px;
   border: 1px solid #ccc;
@@ -139,4 +139,39 @@ button.signUpButton:hover {
   right: 50px;
   top: 200px;
   border-radius: 100%;
+}
+
+.submitButton {
+  /* Button */
+  position: absolute;
+  max-width: 200;
+  height: 80px;
+  left: 220px;
+  top: 500px;
+
+  background: #ffb236;
+  border-radius: 40px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 48px;
+  color: #ffa726;
+  text-decoration: none;
+  border-style: none;
+
+  margin: auto;
+  padding: 15px 60px 15px 60px;
+
+  margin-top: 60;
+  border-radius: 40;
+  text-transform: none;
+}
+
+/* button change when hover and clicked */
+button.submitButton:hover {
+  color: #e5e5e5;
+  background-color: #f57c00;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }

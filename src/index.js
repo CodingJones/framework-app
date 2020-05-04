@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import Success from "./components/Success";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route exact path="/framework-app" component={LandingPage} />
         <Route path="/components/SignIn" component={SignIn} />
         <Route path="/components/SignUp" component={SignUp} />
+        <Route path="/components/Success" component={Success} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

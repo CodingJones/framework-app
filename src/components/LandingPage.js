@@ -9,7 +9,7 @@ export class LandingPage extends Component {
     return (
       <div className="continaer">
         <Helmet>
-          <style>{"body {background: #003E75}"}</style>
+          <style>{"body {background: #0d47a1}"}</style>
         </Helmet>
         <div class="row">
           <div class="col-xs-9 col-md-7">
