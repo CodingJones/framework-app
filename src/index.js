@@ -8,18 +8,24 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
-import SignIn from "./components/SignIn";
+import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import Success from "./components/Success";
+import Choose from "./components/Choose";
+import Morning from "./components/Morning";
+import Evening from "./components/Evening";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route exact path="/framework-app" component={LandingPage} />
-        <Route path="/components/SignIn" component={SignIn} />
+        <Route path="/components/LogIn" component={LogIn} />
         <Route path="/components/SignUp" component={SignUp} />
         <Route path="/components/Success" component={Success} />
+        <Route path="/components/Choose" component={Choose} />
+        <Route path="/components/Morning" component={Morning} />
+        <Route path="/components/Evening" component={Evening} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

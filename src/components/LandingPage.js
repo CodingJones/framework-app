@@ -24,7 +24,7 @@ export class LandingPage extends Component {
           </div>
           <div class="col-xs-3 col-md-5">
             <nav class="navbar">
-              <Link to="/components/SignIn">
+              <Link to="/components/LogIn">
                 <button class="navLogInButton"> Log In </button>
               </Link>
               <Link to="/components/SignUp">

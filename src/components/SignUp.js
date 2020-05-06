@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import TextField from "@material-ui/core/TextField";
@@ -9,42 +8,28 @@ import { Helmet } from "react-helmet";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import indigo from "@material-ui/core/colors/indigo";
-import orange from "@material-ui/core/colors/orange";
 import "../App.css";
+import Container from "@material-ui/core/Container";
 
 const primary = indigo[900]; /* #3f51b5*/
-const secondary = orange[400];
 
 const useStyles = makeStyles((theme) => ({
   cardStyle: {
-    maxWidth: 500,
-    marginTop: 60,
-    paddingBottom: 60,
+    marginTop: 30,
+    paddingBottom: 30,
     margin: "auto",
     borderRadius: 40,
   },
   paper: {
-    marginTop: 50,
+    marginTop: 30,
+    marginRight: 10,
+    marginLeft: 10,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
   },
   form: {
     width: "100%",
-    marginTop: 5,
-  },
-  submit: {
-    margin: "auto",
-    padding: "15px 60px 15px 60px",
-    maxWidth: 200,
-    marginTop: 60,
-    borderRadius: 40,
-    fontSize: 16,
-    fontWeight: 400,
-    textTransform: "none",
-    textDecoration: "none",
-    backgroundColor: secondary,
-    fontFamily: ["Helvetica Neue"].join(","),
   },
   header: {
     fontWeight: 500,
@@ -55,14 +40,12 @@ const useStyles = makeStyles((theme) => ({
   subHeader: {
     fontFamily: "Helvetica Neue",
     display: "flex",
+    color: primary,
     alignItems: "center",
     textAlign: "center",
     fontWeight: 400,
     marginBottom: 40,
     marginTop: 20,
-  },
-  linkStyle: {
-    textDecoration: "none",
   },
 }));
 
@@ -70,7 +53,7 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
-    <div>
+    <Container component="main" maxWidth="xs">
       <Card className={classes.cardStyle}>
         <CardContent>
           <div className={classes.paper}>
@@ -120,19 +103,19 @@ export default function SignUp() {
                     id="password"
                   />
                 </Grid>
-              </Grid>
-              <Grid container justify="flex-end">
-                <Link className={classes.linkStyle} to="/framework-app">
-                  <button class="submitButton"> Let's go! </button>
-                </Link>
-                <Helmet>
-                  <style>{"body {background: #0d47a1}"}</style>
-                </Helmet>
+                <Grid item xs={12}>
+                  <Link className={classes.linkStyle} to="/components/Success">
+                    <button class="submitButton"> Let's go! </button>
+                  </Link>
+                  <Helmet>
+                    <style>{"body {background: #0d47a1}"}</style>
+                  </Helmet>
+                </Grid>
               </Grid>
             </form>
           </div>
         </CardContent>
       </Card>
-    </div>
+    </Container>
   );
 }
