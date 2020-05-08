@@ -104,7 +104,7 @@ export default function SignUp() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Link className={classes.linkStyle} to="/components/Success">
+                  <Link to="/components/Success">
                     <button class="submitButton"> Let's go! </button>
                   </Link>
                   <Helmet>

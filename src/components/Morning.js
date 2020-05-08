@@ -12,8 +12,6 @@ const primary = indigo[900]; /* #3f51b5*/
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: 20,
-    marginRight: 10,
-    marginLeft: 10,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -46,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     color: primary,
   },
   writeField: {
-    width: 325,
+    width: 400,
     height: 150,
   },
 }));
@@ -59,7 +57,7 @@ export default function Morning() {
   const styles = useStyles();
 
   return (
-    <Container component="main" maxWidth="md">
+    <Container component="main" maxWidth="xs">
       <div className={styles.paper}>
         <Typography>
           <Typography className={styles.header}>Good morning, </Typography>
