@@ -11,6 +11,14 @@ import indigo from "@material-ui/core/colors/indigo";
 
 const primary = indigo[900]; /* #3f51b5*/
 
+var tempDate = new Date();
+var date =
+  tempDate.getDate() +
+  "/" +
+  (tempDate.getMonth() + 1) +
+  "-" +
+  tempDate.getFullYear();
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: 20,
@@ -23,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pics: {
     maxWidth: 300,
-    marginTop: 150,
+    marginTop: 100,
   },
   picText: {
     marginTop: 10,
@@ -34,13 +42,23 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 350,
     fontSize: 24,
   },
+  date: {
+    marginTop: 30,
+    fontFamily: "Helvetica Neue",
+    color: primary,
+    fontWeight: 350,
+    fontSize: 42,
+  },
 }));
 
 export default function Choose() {
   const styles = useStyles();
+  const currDate = " " + date;
+
   return (
     <Container component="main" maxWidth="md">
       <div className={styles.paper}>
+        <div className={styles.date}>{currDate}</div>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
             <Link to="/components/Morning">

@@ -30,12 +30,12 @@ const useStyles = makeStyles((theme) => ({
 export default function Morning() {
   const styles = useStyles();
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="md">
       <div className={styles.paper}>
         <Typography>
           <h1>Morning </h1>
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={0}>
           <Grid item xs={12} sm={6}></Grid>
         </Grid>
       </div>
