@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     color: primary,
     marginBottom: 40,
     marginTop: 40,
+    textDecoration: "none",
   },
 }));
 
@@ -50,9 +51,7 @@ export default function Success() {
               <h4>Welcome onboard </h4>
             </Typography>
             <Link to="/components/Choose">
-              <Button className={styles.continue} variant="outlined">
-                Start reflecting
-              </Button>
+              <button class="submitButton"> Start! </button>
             </Link>
           </div>
           <Helmet>

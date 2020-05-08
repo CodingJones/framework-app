@@ -78,7 +78,7 @@ export default function LogIn() {
                 label="Remember me"
               />
               <Grid item xs={12}>
-                <Link className={classes.linkStyle} to="/components/Success">
+                <Link to="/components/Success">
                   <button class="submitButton"> Log in </button>
                 </Link>
               </Grid>

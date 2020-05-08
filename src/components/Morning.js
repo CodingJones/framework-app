@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Helmet } from "react-helmet";
-import Button from "@material-ui/core/Button";
 import indigo from "@material-ui/core/colors/indigo";
-import Grid from "@material-ui/core/Grid";
+import Slider from "@material-ui/core/Slider";
+import InputBase from "@material-ui/core/InputBase";
+
+const primary = indigo[900]; /* #3f51b5*/
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -25,23 +26,71 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 40,
     marginTop: 40,
   },
+  header: {
+    fontWeight: 500,
+    fontSize: 36,
+    fontFamily: "Helvetica Neue",
+    color: primary,
+    marginTop: 50,
+  },
+  feel: {
+    fontWeight: 500,
+    fontSize: 20,
+    fontFamily: "Helvetica Neue",
+    color: primary,
+    marginTop: 30,
+  },
+  slider: {
+    width: 300,
+    marginTop: 50,
+    color: primary,
+  },
+  writeField: {
+    width: 325,
+    height: 150,
+  },
 }));
+
+function valuetext(value) {
+  return `${value}%`;
+}
 
 export default function Morning() {
   const styles = useStyles();
+
   return (
     <Container component="main" maxWidth="md">
       <div className={styles.paper}>
         <Typography>
-          <h1>Morning </h1>
+          <Typography className={styles.header}>Good morning, </Typography>
+          <Typography className={styles.feel}>
+            How do you feel today?
+          </Typography>
+          <Slider
+            className={styles.slider}
+            defaultValue={0}
+            getAriaValueText={valuetext}
+            aria-labelledby="discrete-slider"
+            valueLabelDisplay="auto"
+            step={10}
+            marks
+            min={0}
+            max={100}
+          />
+          <div class="monkeyMind">
+            <InputBase
+              className={styles.writeField}
+              id="outlined-multiline-static"
+              multiline
+              inputProps={{ "aria-label": "naked" }}
+              rows={6}
+            />
+          </div>
+          <Helmet>
+            <style>{"body {background: #eeeeee}"}</style>
+          </Helmet>
         </Typography>
-        <Grid container spacing={0}>
-          <Grid item xs={12} sm={6}></Grid>
-        </Grid>
       </div>
-      <Helmet>
-        <style>{"body {background: #eeeeee}"}</style>
-      </Helmet>
     </Container>
   );
 }
