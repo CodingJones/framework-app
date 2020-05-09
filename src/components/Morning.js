@@ -6,6 +6,8 @@ import { Helmet } from "react-helmet";
 import indigo from "@material-ui/core/colors/indigo";
 import Slider from "@material-ui/core/Slider";
 import InputBase from "@material-ui/core/InputBase";
+import { Link } from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
 
 const primary = indigo[900]; /* #3f51b5*/
 
@@ -16,13 +18,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     textAlign: "center",
-  },
-  continue: {
-    fontWeight: 400,
-    fontSize: 18,
-    fontFamily: "Helvetica Neue",
-    marginBottom: 40,
-    marginTop: 40,
   },
   header: {
     fontWeight: 500,
@@ -46,6 +41,13 @@ const useStyles = makeStyles((theme) => ({
   writeField: {
     width: 400,
     height: 150,
+  },
+  subHeader: {
+    fontWeight: 400,
+    fontSize: 16,
+    fontFamily: "Helvetica Neue",
+    color: primary,
+    marginTop: 5,
   },
 }));
 
@@ -75,6 +77,11 @@ export default function Morning() {
             min={0}
             max={100}
           />
+          <Typography className={styles.feel}>Monkey mind:</Typography>
+          <Typography className={styles.subHeader}>
+            {" "}
+            Spend some minutes writing your feelings down
+          </Typography>
           <div class="monkeyMind">
             <InputBase
               className={styles.writeField}
@@ -84,6 +91,16 @@ export default function Morning() {
               rows={6}
             />
           </div>
+          <Grid item xs={12}>
+            <Link to="/components/Questions">
+              <button class="nextButton">Next</button>
+            </Link>
+          </Grid>
+          <Grid item xs={12}>
+            <Link to="/components/Choose">
+              <button class="prevButton">Previous</button>
+            </Link>
+          </Grid>
           <Helmet>
             <style>{"body {background: #eeeeee}"}</style>
           </Helmet>
