@@ -7,7 +7,7 @@ import Racoon from "../images/racoon.png";
 export class LandingPage extends Component {
   render() {
     return (
-      <div className="continaer">
+      <div class="continaer">
         <Helmet>
           <style>{"body {background: #0d47a1}"}</style>
         </Helmet>

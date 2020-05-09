@@ -219,8 +219,15 @@ div.monkeyMind:hover {
 }
 
 .sunImg {
-  position: relative;
-  max-width: 500px;
-  left: 50px;
-  top: 0px;
+  position: absolute;
+  max-width: 350px;
+  left: 20px;
+  top: 20px;
+}
+
+.sun2Img {
+  position: absolute;
+  max-width: 300px;
+  right: 20px;
+  top: 40px;
 }
