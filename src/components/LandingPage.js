@@ -3,11 +3,13 @@ import "../App.css";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Racoon from "../images/racoon.png";
+import Grid from "@material-ui/core/Grid";
+import Container from "@material-ui/core/Container";
 
 export class LandingPage extends Component {
   render() {
     return (
-      <div class="continaer">
+      <Container component="main" maxWidth="lg">
         <Helmet>
           <style>{"body {background: #0d47a1}"}</style>
         </Helmet>
@@ -36,7 +38,7 @@ export class LandingPage extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     );
   }
 }

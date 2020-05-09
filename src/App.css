@@ -231,3 +231,10 @@ div.monkeyMind:hover {
   right: 20px;
   top: 40px;
 }
+
+.sleepyRacoonImg {
+  position: absolute;
+  max-width: 400px;
+  right: 0px;
+  bottom: 0px;
+}

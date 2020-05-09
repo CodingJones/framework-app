@@ -63,23 +63,18 @@ const useStyles = makeStyles((theme) => ({
 const customIcons = {
   1: {
     icon: <SentimentVeryDissatisfiedIcon />,
-    label: "Very Dissatisfied",
   },
   2: {
     icon: <SentimentDissatisfiedIcon />,
-    label: "Dissatisfied",
   },
   3: {
     icon: <SentimentSatisfiedIcon />,
-    label: "Neutral",
   },
   4: {
     icon: <SentimentSatisfiedAltIcon />,
-    label: "Satisfied",
   },
   5: {
     icon: <SentimentVerySatisfiedIcon />,
-    label: "Very Satisfied",
   },
 };
 

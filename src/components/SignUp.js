@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import indigo from "@material-ui/core/colors/indigo";
 import "../App.css";
 import Container from "@material-ui/core/Container";
+import SleepyRacoon from "../images/sleepyRacoon.png";
 
 const primary = indigo[900]; /* #3f51b5*/
 
@@ -54,14 +55,21 @@ export default function SignUp() {
 
   return (
     <Container component="main" maxWidth="xs">
+      <div>
+        <img
+          class="sleepyRacoonImg"
+          src={SleepyRacoon}
+          alt="Sleepy Racoon img"
+        />
+      </div>
       <Card className={classes.cardStyle}>
         <CardContent>
           <div className={classes.paper}>
             <Typography className={classes.header}>Sign up Today! </Typography>
             <Grid item xs={12}>
               <Typography className={classes.subHeader}>
-                Reflect is currently in an open Beta. <br /> Sign up to to try
-                it out before the official release!
+                Reflect is currently in an open Beta. <br /> Sign up to try it
+                out before the official release!
               </Typography>
             </Grid>
             <form className={classes.form} noValidate>
