@@ -9,10 +9,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import indigo from "@material-ui/core/colors/indigo";
+import blue from "@material-ui/core/colors/blue";
 import { Helmet } from "react-helmet";
 
-const primary = indigo[900]; /* #3f51b5*/
+const primary = blue[900]; /* #0d47a1 */
 
 const useStyles = makeStyles((theme) => ({
   cardStyle: {
@@ -32,13 +32,6 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: "100%",
   },
-  header: {
-    fontWeight: 500,
-    fontSize: 36,
-    fontFamily: "Helvetica Neue",
-    color: primary,
-    marginBottom: 40,
-  },
 }));
 
 export default function LogIn() {
@@ -49,7 +42,7 @@ export default function LogIn() {
       <Card className={classes.cardStyle}>
         <CardContent>
           <div className={classes.paper}>
-            <Typography className={classes.header}>Log in</Typography>
+            <h3 className="header"> Log in</h3>
             <form className={classes.form} noValidate>
               <TextField
                 variant="outlined"
@@ -87,7 +80,7 @@ export default function LogIn() {
                   <style>{"body {background: #eeeeee}"}</style>
                 </Helmet>
                 <Grid item>
-                  <Link href="/components/SignUp" variant="body2">
+                  <Link to="/components/SignUp" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>

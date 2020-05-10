@@ -7,12 +7,8 @@ import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import indigo from "@material-ui/core/colors/indigo";
 import "../App.css";
-import Container from "@material-ui/core/Container";
 import SleepyRacoon from "../images/sleepyRacoon.png";
-
-const primary = indigo[900]; /* #3f51b5*/
 
 const useStyles = makeStyles((theme) => ({
   cardStyle: {
@@ -20,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
     margin: "auto",
     borderRadius: 40,
+    maxWidth: 400,
   },
   paper: {
     marginTop: 30,
@@ -32,16 +29,9 @@ const useStyles = makeStyles((theme) => ({
   form: {
     width: "100%",
   },
-  header: {
-    fontWeight: 500,
-    fontSize: 36,
-    fontFamily: "Helvetica Neue",
-    color: primary,
-  },
   subHeader: {
     fontFamily: "Helvetica Neue",
     display: "flex",
-    color: primary,
     alignItems: "center",
     textAlign: "center",
     fontWeight: 400,
@@ -51,28 +41,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
-  const classes = useStyles();
+  const styles = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
+    <div className="container">
       <div>
-        <img
-          class="sleepyRacoonImg"
-          src={SleepyRacoon}
-          alt="Sleepy Racoon img"
-        />
+        <img class="sleepyRacoonImg" src={SleepyRacoon} alt="SleepyRacoonImg" />
       </div>
-      <Card className={classes.cardStyle}>
+      <Card className={styles.cardStyle}>
         <CardContent>
-          <div className={classes.paper}>
-            <Typography className={classes.header}>Sign up Today! </Typography>
+          <div className={styles.paper}>
+            <h3 className="header">Sign up Today! </h3>
             <Grid item xs={12}>
-              <Typography className={classes.subHeader}>
+              <p className="text">
                 Reflect is currently in an open Beta. <br /> Sign up to try it
                 out before the official release!
-              </Typography>
+              </p>
             </Grid>
-            <form className={classes.form} noValidate>
+            <form className={styles.form} noValidate>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -115,6 +101,11 @@ export default function SignUp() {
                   <Link to="/components/Success">
                     <button class="submitButton"> Let's go! </button>
                   </Link>
+                  <Grid item>
+                    <Link to="/components/LogIn" variant="body2">
+                      {"Already have an account? Log in!"}
+                    </Link>
+                  </Grid>
                   <Helmet>
                     <style>{"body {background: #0d47a1}"}</style>
                   </Helmet>
@@ -124,6 +115,6 @@ export default function SignUp() {
           </div>
         </CardContent>
       </Card>
-    </Container>
+    </div>
   );
 }
