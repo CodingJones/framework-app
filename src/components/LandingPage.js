@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Racoon from "../images/racoon.png";
 import { Navbar } from "./Navbar";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
 export class LandingPage extends Component {
   render() {
@@ -25,7 +26,9 @@ export class LandingPage extends Component {
         </div>
         <div className="row">
           <div className="col-xs-12">
-            <Button />
+            <Link to="/components/SignUp">
+              <Button label="Sign Up" />
+            </Link>
           </div>
         </div>
         <div className="row">

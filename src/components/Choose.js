@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { Helmet } from "react-helmet";
@@ -62,13 +61,13 @@ export default function Choose() {
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
             <Link to="/components/Morning">
-              <img src={Morning} className={styles.pics} />
+              <img src={Morning} className={styles.pics} alt="morning img" />
             </Link>
             <h4 className="header">Morning rutine</h4>
           </Grid>
           <Grid item xs={12} sm={6}>
             <Link to="/components/Evening">
-              <img src={Evening} className={styles.pics} />
+              <img src={Evening} className={styles.pics} alt="evening img" />
             </Link>
             <h4 className="header">Evening rutine</h4>
           </Grid>
