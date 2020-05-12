@@ -8,6 +8,7 @@ import Sun from "../images/sun.png";
 import Sun2 from "../images/sun2.png";
 import { SmileyRating } from "./SmileyRating";
 import { UserInput } from "./UserInput";
+import { Navbar } from "./Navbar";
 
 const useStyles = makeStyles((theme) => ({
   paper: {

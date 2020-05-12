@@ -5,7 +5,6 @@ import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import { Helmet } from "react-helmet";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import "../App.css";
 import SleepyRacoon from "../images/sleepyRacoon.png";
@@ -40,6 +39,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function Dialog(props) {
+  return (
+    <div>
+      <h1 className="Dialog-title">{props.title}</h1>
+      <p className="Dialog-message">{props.message}</p>
+    </div>
+  );
+}
+
 export default function SignUp() {
   const styles = useStyles();
 
@@ -65,7 +73,7 @@ export default function SignUp() {
                     name="firstName"
                     variant="outlined"
                     fullWidth
-                    id="firstName"
+                    value={fname}
                     label="First Name"
                   />
                 </Grid>
@@ -73,7 +81,6 @@ export default function SignUp() {
                   <TextField
                     variant="outlined"
                     fullWidth
-                    id="lastName"
                     label="Last Name"
                     name="lastName"
                   />
@@ -82,7 +89,6 @@ export default function SignUp() {
                   <TextField
                     variant="outlined"
                     fullWidth
-                    id="email"
                     label="Email"
                     name="email"
                   />
@@ -94,7 +100,6 @@ export default function SignUp() {
                     name="password"
                     label="Password"
                     type="password"
-                    id="password"
                   />
                 </Grid>
                 <Grid item xs={12}>

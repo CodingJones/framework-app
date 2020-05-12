@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Success() {
+export default function Success(props) {
   const styles = useStyles();
 
   return (
@@ -48,7 +48,7 @@ export default function Success() {
           <div className={styles.paper}>
             <Typography>
               <h1>Success! </h1> <br />
-              <h4>Welcome onboard </h4>
+              <h4>Welcome onboard {props.name}</h4>
             </Typography>
             <Link to="/components/Choose">
               <button class="submitButton"> Start! </button>
