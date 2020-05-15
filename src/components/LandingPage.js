@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import Racoon from "../images/racoon.png";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
@@ -54,7 +53,7 @@ export default function LandingPage() {
           <Button label="Sign Up" />
         </Link>
       </WrapperLeft>
-      <RacoonImg src={Racoon} />
+      <RacoonImg src={Racoon} alt="Racoon Img" />
     </>
   );
 }

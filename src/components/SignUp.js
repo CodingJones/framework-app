@@ -1,13 +1,60 @@
-import React, { Component } from "react";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
+import React from "react";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import { Helmet } from "react-helmet";
-import { makeStyles } from "@material-ui/core/styles";
-import "../App.css";
 import SleepyRacoon from "../images/sleepyRacoon.png";
+import styled from "styled-components";
+import { CardContent } from "@material-ui/core";
+import { Button } from "./Button";
+import Card from "@material-ui/core/Card";
+import { makeStyles } from "@material-ui/core/styles";
+
+const Paper = styled.div`
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const Form = styled.form`
+  width: "100%";
+`;
+
+const Header = styled.h1`
+  font-family: "Helvetica Neue";
+  font-size: 36px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+`;
+
+const SubHeader = styled.p`
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: #0d47a1;
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
+const SleepyRacoonImg = styled.img`
+  position: absolute;
+  max-width: 400px;
+  right: 0px;
+  bottom: 0px;
+`;
+
+const StyledLink = styled(Link)`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #0d47a1;
+`;
 
 const useStyles = makeStyles((theme) => ({
   cardStyle: {
@@ -17,47 +64,23 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 40,
     maxWidth: 400,
   },
-  paper: {
-    marginTop: 30,
-    marginRight: 10,
-    marginLeft: 10,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  form: {
-    width: "100%",
-  },
-  subHeader: {
-    fontFamily: "Helvetica Neue",
-    display: "flex",
-    alignItems: "center",
-    textAlign: "center",
-    fontWeight: 400,
-    marginBottom: 40,
-    marginTop: 20,
-  },
 }));
 
 export default function SignUp() {
   const styles = useStyles();
-
   return (
-    <div className="container">
-      <div>
-        <img class="sleepyRacoonImg" src={SleepyRacoon} alt="SleepyRacoonImg" />
-      </div>
+    <>
       <Card className={styles.cardStyle}>
-        <CardContent>
-          <div className={styles.paper}>
-            <h3 className="header">Sign up Today! </h3>
+        <Paper>
+          <CardContent>
+            <Header> Sign up Today! </Header>
             <Grid item xs={12}>
-              <p className="text">
+              <SubHeader>
                 Reflect is currently in an open Beta. <br /> Sign up to try it
                 out before the official release!
-              </p>
+              </SubHeader>
             </Grid>
-            <form className={styles.form} noValidate>
+            <Form noValidate>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -94,22 +117,21 @@ export default function SignUp() {
                 </Grid>
                 <Grid item xs={12}>
                   <Link to="/components/Success">
-                    <button class="submitButton"> Let's go! </button>
+                    <Button label="Let's go!" />
                   </Link>
-                  <Grid item>
-                    <Link to="/components/LogIn" variant="body2">
-                      {"Already have an account? Log in!"}
-                    </Link>
-                  </Grid>
-                  <Helmet>
-                    <style>{"body {background: #0d47a1}"}</style>
-                  </Helmet>
+                </Grid>
+                <Grid item xs={12}>
+                  <StyledLink to="/components/LogIn">
+                    Already have an account? Log in!
+                  </StyledLink>
                 </Grid>
               </Grid>
-            </form>
-          </div>
-        </CardContent>
+            </Form>
+          </CardContent>
+        </Paper>
       </Card>
-    </div>
+
+      <SleepyRacoonImg src={SleepyRacoon} alt="SleepyRacoonImg" />
+    </>
   );
 }

@@ -7,12 +7,6 @@ h2.header {
   font-size: 36px;
 }
 
-h3.header {
-  font-size: 36px;
-  color: #0d47a1;
-  margin-bottom: 20px;
-}
-
 h4.header {
   font-size: 20px;
   color: #0d47a1;
@@ -134,11 +128,4 @@ div.monkeyMind:hover {
   max-width: 300px;
   right: 20px;
   top: 40px;
-}
-
-.sleepyRacoonImg {
-  position: absolute;
-  max-width: 400px;
-  right: 0px;
-  bottom: 0px;
 }
