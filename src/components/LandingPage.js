@@ -8,34 +8,32 @@ import { Navbar } from "./Navbar";
 
 export default function LandingPage() {
   return (
-    <div className="containerLeft">
+    <>
       <Navbar />
-      <div className="row">
-        <div className="col-xs-12">
-          <h1 className="header">Reflect on your day.</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12">
+            <h1 className="header">Reflect on your day.</h1>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-12">
+            <p className="subHeader">
+              Reflect daily with questions, calm your thinking, organize your
+              life.
+            </p>
+            <Link to="/components/SignUp">
+              <Button label="Sign Up" />
+            </Link>
+          </div>
+        </div>
+        <div className="row">
+          <img class="racoonImg" src={Racoon} alt="racoon img" />
+          <Helmet>
+            <style>{"body {background: #0d47a1}"}</style>
+          </Helmet>
         </div>
       </div>
-      <div className="row">
-        <div className="col-xs-12">
-          <p className="subHeader">
-            Reflect daily with questions, calm your thinking, organize your
-            life.
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xs-12">
-          <Link to="/components/SignUp">
-            <Button label="Sign Up" />
-          </Link>
-        </div>
-      </div>
-      <div className="row">
-        <img class="racoonImg" src={Racoon} alt="racoon img" />
-        <Helmet>
-          <style>{"body {background: #0d47a1}"}</style>
-        </Helmet>
-      </div>
-    </div>
+    </>
   );
 }

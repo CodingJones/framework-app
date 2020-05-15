@@ -39,15 +39,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Dialog(props) {
-  return (
-    <div>
-      <h1 className="Dialog-title">{props.title}</h1>
-      <p className="Dialog-message">{props.message}</p>
-    </div>
-  );
-}
-
 export default function SignUp() {
   const styles = useStyles();
 
@@ -73,7 +64,6 @@ export default function SignUp() {
                     name="firstName"
                     variant="outlined"
                     fullWidth
-                    value={fname}
                     label="First Name"
                   />
                 </Grid>
