@@ -17,7 +17,7 @@ const Form = styled.form`
 `;
 
 const Header = styled.h1`
-  font-size: 20px;
+  font-size: 26px;
   color: #0d47a1;
   text-align: center;
   margin-top: 5px;
@@ -32,12 +32,13 @@ const StyledLink = styled(Link)`
 `;
 
 const Paper = styled.div`
-  margin-top: 30;
-  margin-right: 10;
-  margin-left: 10;
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -86,19 +87,21 @@ export default function LogIn() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-              <Grid item xs={12}>
-                <Link to="/components/Choose">
-                  <Button label="Log in" />
-                </Link>
-              </Grid>
               <Grid>
-                <Helmet>
-                  <style>{"body {background: #eeeeee}"}</style>
-                </Helmet>
-                <Grid item>
-                  <StyledLink to="/components/SignUp">
-                    Don't have an account? Sign Up
+                <Grid xs={12}>
+                  <StyledLink to="/components/Choose">
+                    <Button label="Log in" />
                   </StyledLink>
+                </Grid>
+                <Grid>
+                  <Helmet>
+                    <style>{"body {background: #eeeeee}"}</style>
+                  </Helmet>
+                  <Grid item>
+                    <StyledLink to="/components/SignUp">
+                      Don't have an account? Sign Up
+                    </StyledLink>
+                  </Grid>
                 </Grid>
               </Grid>
             </Form>
