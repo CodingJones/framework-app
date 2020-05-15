@@ -4,15 +4,41 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import blue from "@material-ui/core/colors/blue";
 import { Helmet } from "react-helmet";
+import styled from "styled-components";
+import { Button } from "./Button";
 
-const primary = blue[900]; /* #0d47a1 */
+const Form = styled.form`
+  width: "100%";
+`;
+
+const Header = styled.h1`
+  font-size: 20px;
+  color: #0d47a1;
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 350;
+`;
+
+const StyledLink = styled(Link)`
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #0d47a1;
+`;
+
+const Paper = styled.div`
+  margin-top: 30;
+  margin-right: 10;
+  margin-left: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const useStyles = makeStyles((theme) => ({
   cardStyle: {
@@ -20,17 +46,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 30,
     margin: "auto",
     borderRadius: 40,
-  },
-  paper: {
-    marginTop: 30,
-    marginRight: 10,
-    marginLeft: 10,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  form: {
-    width: "100%",
+    maxWidth: 400,
   },
 }));
 
@@ -41,9 +57,9 @@ export default function LogIn() {
     <Container component="main" maxWidth="xs">
       <Card className={classes.cardStyle}>
         <CardContent>
-          <div className={classes.paper}>
-            <h3 className="header"> Log in</h3>
-            <form className={classes.form} noValidate>
+          <Paper>
+            <Header> Log in </Header>
+            <Form>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -71,22 +87,22 @@ export default function LogIn() {
                 label="Remember me"
               />
               <Grid item xs={12}>
-                <Link to="/components/Success">
-                  <button class="submitButton"> Log in </button>
+                <Link to="/components/Choose">
+                  <Button label="Log in" />
                 </Link>
               </Grid>
-              <Grid container>
+              <Grid>
                 <Helmet>
                   <style>{"body {background: #eeeeee}"}</style>
                 </Helmet>
                 <Grid item>
-                  <Link to="/components/SignUp" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
+                  <StyledLink to="/components/SignUp">
+                    Don't have an account? Sign Up
+                  </StyledLink>
                 </Grid>
               </Grid>
-            </form>
-          </div>
+            </Form>
+          </Paper>
         </CardContent>
       </Card>
     </Container>

@@ -7,7 +7,6 @@ const Nav = styled.div`
   float: right;
   text-align: center;
   background-color: #0d47a1;
-  margin-right: 50px;
 `;
 
 const NavHeader = styled.div`
@@ -45,18 +44,17 @@ const NavLogIn = styled.div`
 `;
 
 const NavSignUp = styled.div`
-  right 100px;
   color: #e5e5e5;
   border: 1px solid #e5e5e5;
   padding: 10px 25px;
   border-radius: 30px;
 
-   &:hover {
-         color: #bebebe;
-         border: 1px solid #bebebe;
-         text-decoration: none;
+  &:hover {
+    color: #bebebe;
+    border: 1px solid #bebebe;
+    text-decoration: none;
   }
-  `;
+`;
 
 export function Navbar() {
   return (

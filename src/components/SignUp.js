@@ -11,8 +11,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const Paper = styled.div`
   margin-top: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ const Form = styled.form`
 
 const Header = styled.h1`
   font-family: "Helvetica Neue";
-  font-size: 36px;
+  font-size: 2.5em;
   color: #0d47a1;
   margin-bottom: 20px;
   align-items: center;
@@ -36,7 +36,7 @@ const SubHeader = styled.p`
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
   color: #0d47a1;
   text-align: center;
   margin-bottom: 40px;
@@ -52,7 +52,7 @@ const SleepyRacoonImg = styled.img`
 const StyledLink = styled(Link)`
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 12px;
+  font-size: 0.8em;
   color: #0d47a1;
 `;
 
@@ -130,7 +130,6 @@ export default function SignUp() {
           </CardContent>
         </Paper>
       </Card>
-
       <SleepyRacoonImg src={SleepyRacoon} alt="SleepyRacoonImg" />
     </>
   );

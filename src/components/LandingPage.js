@@ -3,6 +3,7 @@ import Racoon from "../images/racoon.png";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
 import { Navbar } from "./Navbar";
+import Container from "@material-ui/core/Container";
 import styled from "styled-components";
 
 const WrapperLeft = styled.div`
@@ -42,7 +43,7 @@ const SubTitle = styled.h2`
 
 export default function LandingPage() {
   return (
-    <>
+    <Container component="main">
       <Navbar />
       <WrapperLeft>
         <Title>Reflect on your day.</Title>
@@ -54,6 +55,6 @@ export default function LandingPage() {
         </Link>
       </WrapperLeft>
       <RacoonImg src={Racoon} alt="Racoon Img" />
-    </>
+    </Container>
   );
 }
