@@ -7,6 +7,7 @@ const Nav = styled.div`
   float: right;
   text-align: center;
   background-color: #0d47a1;
+  margin-right: 50px;
 `;
 
 const NavHeader = styled.div`

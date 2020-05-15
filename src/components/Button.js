@@ -2,9 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Button1 = styled.button`
-  cursor: pointer;
-  margin: 0 1em;
-  padding: 0.25em 1em;
+  padding: 0.5em 2em;
   background: #ffb236;
   color: #0d47a1;
   border-radius: 40px;
