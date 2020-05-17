@@ -4,7 +4,6 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -36,22 +35,10 @@ const Paper = styled.div`
   text-align: center;
 `;
 
-const useStyles = makeStyles((theme) => ({
-  cardStyle: {
-    marginTop: 30,
-    paddingBottom: 30,
-    margin: "auto",
-    borderRadius: 40,
-    maxWidth: 400,
-  },
-}));
-
-export default function LogIn() {
-  const styles = useStyles();
-
-  return (
-    <Container component="main" maxWidth="xs">
-      <Card className={styles.cardStyle}>
+export default class LogIn extends Component {
+  render() {
+    return (
+      <Container component="main" maxWidth="xs">
         <CardContent>
           <Paper>
             <Heading h3>Log in</Heading>
@@ -98,7 +85,7 @@ export default function LogIn() {
             </Form>
           </Paper>
         </CardContent>
-      </Card>
-    </Container>
-  );
+      </Container>
+    );
+  }
 }

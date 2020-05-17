@@ -5,8 +5,7 @@ import InputBase from "@material-ui/core/InputBase";
 import styled from "styled-components";
 
 const StyledInput = styled.div`
-  width: 500px;
-  margin-top: 20px;
+  width: 400px;
   background: #edeff1;
   border: 1px solid #d9dbdf;
   box-sizing: border-box;
@@ -21,8 +20,8 @@ const StyledInput = styled.div`
 
 const useStyles = makeStyles((theme) => ({
   writeField: {
-    width: 400,
-    height: 150,
+    width: 300,
+    height: 100,
     alignItems: "center",
     textAlign: "center",
     fontSize: 16,
@@ -39,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function UserInput() {
+export function QuestionsInput() {
   const styles = useStyles();
+
   return (
     <div className={styles.paper}>
       <StyledInput>
@@ -49,7 +49,7 @@ export function UserInput() {
           id="outlined-multiline-static"
           multiline
           inputProps={{ "aria-label": "naked" }}
-          rows={6}
+          rows={4}
         />
       </StyledInput>
     </div>

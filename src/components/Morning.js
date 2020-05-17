@@ -35,7 +35,7 @@ export default function Morning() {
   return (
     <Container component="main" maxWidth="xs">
       <Wrapper>
-        <Heading h2>Good morning,()</Heading>
+        <Heading h2>Good morning</Heading>
         <Heading h5>How do you feel today?</Heading>
         <SmileyRating />
         <Heading h5>Monkey mind:</Heading>

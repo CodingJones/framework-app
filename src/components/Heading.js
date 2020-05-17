@@ -62,6 +62,7 @@ const PageText = styled.p`
   text-align: center;
   color: #0d47a1;
   font-style: italic;
+  margin-top: 20px;
   ${baseStyle};
 `;
 

@@ -14,6 +14,7 @@ import Success from "./components/Success";
 import Choose from "./components/Choose";
 import Morning from "./components/Morning";
 import Evening from "./components/Evening";
+import Questions from "./components/Questions";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/components/Choose" component={Choose} />
         <Route path="/components/Morning" component={Morning} />
         <Route path="/components/Evening" component={Evening} />
+        <Route path="/components/Questions" component={Questions} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,
