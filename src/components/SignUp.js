@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import SleepyRacoon from "../images/sleepyRacoon.png";
 import styled from "styled-components";
 import { CardContent } from "@material-ui/core";
-import { Button } from "./Button";
+import Button from "./Button";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -25,7 +25,7 @@ const Form = styled.form`
 
 const Header = styled.h1`
   font-family: "Helvetica Neue";
-  font-size: 2.5em;
+  font-size: 36px;
   color: #0d47a1;
   margin-bottom: 20px;
   align-items: center;
@@ -36,7 +36,7 @@ const SubHeader = styled.p`
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 14px;
   color: #0d47a1;
   text-align: center;
   margin-bottom: 40px;
@@ -52,8 +52,12 @@ const SleepyRacoonImg = styled.img`
 const StyledLink = styled(Link)`
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 0.8em;
+  font-size: 12px;
   color: #0d47a1;
+`;
+
+const StyledLinkButton = styled(Link)`
+  font-size: 16px;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -116,9 +120,9 @@ export default function SignUp() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <Link to="/components/Success">
+                  <StyledLinkButton to="/components/Success">
                     <Button label="Let's go!" />
-                  </Link>
+                  </StyledLinkButton>
                 </Grid>
                 <Grid item xs={12}>
                   <StyledLink to="/components/LogIn">

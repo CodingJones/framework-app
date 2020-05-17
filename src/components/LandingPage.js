@@ -1,6 +1,6 @@
 import React from "react";
 import Racoon from "../images/racoon.png";
-import { Button } from "./Button";
+import Button from "./Button";
 import { Link } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import Container from "@material-ui/core/Container";
@@ -11,7 +11,7 @@ const WrapperLeft = styled.div`
   align-items: center;
   text-align: center;
   margin-left: 200px;
-  margin-top: 150px;
+  margin-top: 180px;
   font-family: "Helvetica Neue";
 `;
 
@@ -23,22 +23,25 @@ const RacoonImg = styled.img`
   border-radius: 100%;
 `;
 
-const Title = styled.h1`
-  font-size: 3em;
+const Header = styled.h1`
+  font-size: 48px;
   text-align: center;
   font-weight: 400;
   color: #ffb236;
+  margin-bottom: 20px;
 `;
 
-const SubTitle = styled.h2`
+const SubHeader = styled.h2`
   width: 400px;
-  height: 200px;
-  font-size: 2em;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 300;
-  line-height: 48px;
   text-align: center;
   color: #e5e5e5;
+  margin-bottom: 100px;
+`;
+
+const StyledLink = styled(Link)`
+  font-size: 26px;
 `;
 
 export default function LandingPage() {
@@ -46,13 +49,13 @@ export default function LandingPage() {
     <Container component="main">
       <Navbar />
       <WrapperLeft>
-        <Title>Reflect on your day.</Title>
-        <SubTitle>
+        <Header>Reflect on your day.</Header>
+        <SubHeader>
           Reflect daily with questions, calm your thinking, organize your life.
-        </SubTitle>
-        <Link to="/components/SignUp">
-          <Button label="Sign Up" />
-        </Link>
+        </SubHeader>
+        <StyledLink to="/components/SignUp">
+          <Button label="Sign Up"> </Button>
+        </StyledLink>
       </WrapperLeft>
       <RacoonImg src={Racoon} alt="Racoon Img" />
     </Container>

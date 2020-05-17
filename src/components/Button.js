@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-const ButtonSignUp = styled.button`
-  padding: 0.5em 2em;
+const StyledButton = styled.button`
+  padding: 15px 50px;
   background: #ffb236;
   color: #0d47a1;
   border-radius: 40px;
-  font-size: 24px;
   text-decoration: none;
   border-style: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
@@ -18,6 +19,6 @@ const ButtonSignUp = styled.button`
   }
 `;
 
-export function Button(props) {
-  return <ButtonSignUp>{props.label} </ButtonSignUp>;
+export default function Button(props) {
+  return <StyledButton> {props.label} </StyledButton>;
 }

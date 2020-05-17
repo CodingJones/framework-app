@@ -10,7 +10,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import { Button } from "./Button";
+import Button from "./Button";
 
 const Form = styled.form`
   width: "100%";
@@ -29,6 +29,10 @@ const StyledLink = styled(Link)`
   margin-bottom: 10px;
   font-size: 12px;
   color: #0d47a1;
+`;
+
+const StyledLinkButton = styled(Link)`
+  font-size: 16px;
 `;
 
 const Paper = styled.div`
@@ -52,14 +56,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function LogIn() {
-  const classes = useStyles();
+  const styles = useStyles();
 
   return (
     <Container component="main" maxWidth="xs">
-      <Card className={classes.cardStyle}>
+      <Card className={styles.cardStyle}>
         <CardContent>
           <Paper>
-            <Header> Log in </Header>
+            <Header>Log in</Header>
             <Form>
               <TextField
                 variant="outlined"
@@ -89,9 +93,9 @@ export default function LogIn() {
               />
               <Grid>
                 <Grid xs={12}>
-                  <StyledLink to="/components/Choose">
+                  <StyledLinkButton to="/components/Choose">
                     <Button label="Log in" />
-                  </StyledLink>
+                  </StyledLinkButton>
                 </Grid>
                 <Grid>
                   <Helmet>
