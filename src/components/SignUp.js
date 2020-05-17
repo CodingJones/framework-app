@@ -8,6 +8,7 @@ import { CardContent } from "@material-ui/core";
 import Button from "./Button";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
+import Heading from "./Heading";
 
 const Paper = styled.div`
   margin-top: 30px;
@@ -21,15 +22,6 @@ const Paper = styled.div`
 
 const Form = styled.form`
   width: "100%";
-`;
-
-const Header = styled.h1`
-  font-family: "Helvetica Neue";
-  font-size: 36px;
-  color: #0d47a1;
-  margin-bottom: 20px;
-  align-items: center;
-  text-align: center;
 `;
 
 const SubHeader = styled.p`
@@ -50,8 +42,6 @@ const SleepyRacoonImg = styled.img`
 `;
 
 const StyledLink = styled(Link)`
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-size: 12px;
   color: #0d47a1;
 `;
@@ -77,7 +67,7 @@ export default function SignUp() {
       <Card className={styles.cardStyle}>
         <Paper>
           <CardContent>
-            <Header> Sign up Today! </Header>
+            <Heading h3> Sign up Today! </Heading>
             <Grid item xs={12}>
               <SubHeader>
                 Reflect is currently in an open Beta. <br /> Sign up to try it

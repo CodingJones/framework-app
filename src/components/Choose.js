@@ -7,6 +7,7 @@ import Evening from "../images/evening.png";
 import Morning from "../images/morning.png";
 import CurrentDate from "./CurrentDate";
 import styled from "styled-components";
+import Heading from "./Heading";
 
 const Paper = styled.div`
   margin-top: 20px;
@@ -23,43 +24,26 @@ const Pics = styled.img`
   margin-top: 100px;
 `;
 
-const PicText = styled.h3`
-  margin-top: 30px;
-  font-family: "Helvetica Neue";
-  color: #0d47a1;
-  align-items: center;
-  text-align: center;
-  font-weight: 350;
-  font-size: 24px;
-`;
-
-const Title = styled.h2`
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 48px;
-  text-align: center;
-  color: #0d47a1;
-`;
-
 export default function Choose() {
   return (
     <Container component="main" maxWidth="md">
       <Paper>
-        <Title>
-          Choose reflection <br /> <CurrentDate />
-        </Title>
+        <Heading h2>Choose reflection</Heading>
+        <Heading h5>
+          <CurrentDate />
+        </Heading>
         <Grid container spacing={1}>
           <Grid xs={12} sm={6}>
             <Link to="/components/Morning">
               <Pics src={Morning} alt="Morning img" />
             </Link>
-            <PicText>Morning rutine </PicText>
+            <Heading h2>Morning rutine </Heading>
           </Grid>
           <Grid xs={12} sm={6}>
             <Link to="/components/Evening">
               <Pics src={Evening} alt="Evening img" />
             </Link>
-            <PicText>Evening rutine</PicText>
+            <Heading h2>Evening rutine</Heading>
           </Grid>
         </Grid>
       </Paper>

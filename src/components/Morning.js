@@ -10,11 +10,11 @@ import { UserInput } from "./UserInput";
 import styled from "styled-components";
 import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
+import Heading from "./Heading";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
-  font-family: "Helvetica Neue";
 `;
 
 const SunImg = styled.img`
@@ -31,39 +31,15 @@ const SunImg2 = styled.img`
   top: 40px;
 `;
 
-const HeaderText = styled.h1`
-  font-size: 28px;
-  text-align: center;
-  font-weight: 400;
-  color: #0d47a1;
-  margin-top: 40px;
-  margin-bottom: 40px;
-`;
-
-const SubHeader = styled.h2`
-  font-size: 18px;
-  color: #0d47a1;
-  text-align: center;
-  font-weight: 350;
-`;
-
-const PageText = styled.p`
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  color: #0d47a1;
-  font-style: italic;
-`;
-
 export default function Morning() {
   return (
     <Container component="main" maxWidth="xs">
       <Wrapper>
-        <HeaderText>Good morning,()</HeaderText>
-        <SubHeader>How do you feel today?</SubHeader>
+        <Heading h2>Good morning,()</Heading>
+        <Heading h5>How do you feel today?</Heading>
         <SmileyRating />
-        <SubHeader>Monkey mind:</SubHeader>
-        <PageText>Spend some minutes writing down your thoughts</PageText>
+        <Heading h5>Monkey mind:</Heading>
+        <Heading p>Spend some minutes writing down your thoughts</Heading>
         <UserInput />
         <Grid item xs={12}>
           <Link to="/components/Questions">

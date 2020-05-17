@@ -11,22 +11,13 @@ import CardContent from "@material-ui/core/CardContent";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Button from "./Button";
+import Heading from "./Heading";
 
 const Form = styled.form`
   width: "100%";
 `;
 
-const Header = styled.h1`
-  font-size: 26px;
-  color: #0d47a1;
-  text-align: center;
-  margin-top: 5px;
-  font-weight: 350;
-`;
-
 const StyledLink = styled(Link)`
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-size: 12px;
   color: #0d47a1;
 `;
@@ -63,7 +54,7 @@ export default function LogIn() {
       <Card className={styles.cardStyle}>
         <CardContent>
           <Paper>
-            <Header>Log in</Header>
+            <Heading h3>Log in</Heading>
             <Form>
               <TextField
                 variant="outlined"
@@ -97,16 +88,12 @@ export default function LogIn() {
                     <Button label="Log in" />
                   </StyledLinkButton>
                 </Grid>
-                <Grid>
-                  <Helmet>
-                    <style>{"body {background: #eeeeee}"}</style>
-                  </Helmet>
-                  <Grid item>
-                    <StyledLink to="/components/SignUp">
-                      Don't have an account? Sign Up
-                    </StyledLink>
-                  </Grid>
-                </Grid>
+                <StyledLink to="/components/SignUp">
+                  Don't have an account? Sign Up
+                </StyledLink>
+                <Helmet>
+                  <style>{"body {background: #eeeeee}"}</style>
+                </Helmet>
               </Grid>
             </Form>
           </Paper>
