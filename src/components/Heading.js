@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import media from "styled-media-query";
 
 const baseStyle = css`
   font-family: "Helvetica Neue", sans-serif;
@@ -14,9 +15,10 @@ const HeadingOne = styled.h1`
   margin-bottom: 20px;
   ${baseStyle};
 
-  @media (max-width: 480px) {
-    font-size: 40px;
-  }
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    font-size: 32px
+  `}
 `;
 
 const HeadingTwo = styled.h2`
@@ -26,6 +28,11 @@ const HeadingTwo = styled.h2`
   color: #0d47a1;
   margin-top: 40px;
   margin-bottom: 40px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    font-size: 22px
+  `}
 `;
 
 const HeadingThree = styled.h3`
@@ -45,6 +52,12 @@ const HeadingFour = styled.h4`
   color: #e5e5e5;
   margin-bottom: 100px;
   ${baseStyle};
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    font-size: 18px;
+    width: 100%;
+  `}
 `;
 
 const HeadingFive = styled.h5`

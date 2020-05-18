@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.div`
+  position: relative;
   float: right;
   text-align: center;
   background-color: #0d47a1;

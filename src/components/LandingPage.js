@@ -12,7 +12,14 @@ const WrapperLeft = styled.div`
   float: left;
   align-items: center;
   text-align: center;
-  margin-top: 120px;
+  margin-top: 150px;
+  margin-left: 80px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    margin-top: 20px;
+    margin-left: 0px;
+  `}
 `;
 
 const RacoonImg = styled.img`
@@ -35,6 +42,16 @@ const RacoonImg = styled.img`
 
 const StyledLink = styled(Link)`
   font-size: 26px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    font-size: 16px;
+  `}
+
+  ${media.between("medium", "large")`
+    /* screen width is between 768px (medium) and 1170px (large) */
+    font-size: 22px;
+  `}
 `;
 
 export default function LandingPage() {

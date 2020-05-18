@@ -93,7 +93,7 @@ export default function SignUp() {
                 out before the official release!
               </SubHeader>
             </Grid>
-            <Form noValidate>
+            <Form>
               <Grid container spacing={2}>
                 <Grid item xs={12} sm={6}>
                   <TextField
@@ -129,7 +129,7 @@ export default function SignUp() {
                   />
                 </Grid>
                 <Grid item xs={12}>
-                  <StyledLinkButton to="/components/Success">
+                  <StyledLinkButton to="/components/Choose">
                     <Button label="Let's go!" />
                   </StyledLinkButton>
                 </Grid>
