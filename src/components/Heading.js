@@ -28,11 +28,6 @@ const HeadingTwo = styled.h2`
   color: #0d47a1;
   margin-top: 40px;
   margin-bottom: 40px;
-
-  ${media.lessThan("medium")`
-    /* screen width is less than 768px (medium) */
-    font-size: 22px
-  `}
 `;
 
 const HeadingThree = styled.h3`

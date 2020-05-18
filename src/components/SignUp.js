@@ -17,6 +17,7 @@ const Paper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  height: 100%;
 
   ${media.lessThan("medium")`
     /* screen width is less than 768px (medium) */
@@ -26,16 +27,6 @@ const Paper = styled.div`
 
 const Form = styled.form`
   width: 100%;
-`;
-
-const SubHeader = styled.p`
-  font-family: "Helvetica Neue";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  color: #0d47a1;
-  text-align: center;
-  margin-bottom: 40px;
 `;
 
 const SleepyRacoonImg = styled.img`
@@ -77,6 +68,7 @@ const StyledCard = styled.div`
     border-radius: 0px;
     margin-top; 0px;
     background-color: #e5e5e5;
+    height: 100%;
   `}
 `;
 
@@ -88,10 +80,10 @@ export default function SignUp() {
           <CardContent>
             <Heading h3> Sign up Today! </Heading>
             <Grid item xs={12}>
-              <SubHeader>
+              <Heading p>
                 Reflect is currently in an open Beta. <br /> Sign up to try it
                 out before the official release!
-              </SubHeader>
+              </Heading>
             </Grid>
             <Form>
               <Grid container spacing={2}>

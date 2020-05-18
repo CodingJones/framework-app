@@ -8,6 +8,7 @@ import Morning from "../images/morning.png";
 import CurrentDate from "./CurrentDate";
 import styled from "styled-components";
 import Heading from "./Heading";
+import media from "styled-media-query";
 
 const Paper = styled.div`
   margin-top: 20px;
@@ -22,6 +23,12 @@ const Paper = styled.div`
 const Pics = styled.img`
   max-width: 250px;
   margin-top: 100px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    max-width: 200px;
+    margin-top: 50px;
+  `}
 `;
 
 export default function Choose() {

@@ -13,12 +13,18 @@ const WrapperLeft = styled.div`
   align-items: center;
   text-align: center;
   margin-top: 150px;
-  margin-left: 80px;
+  margin-left: 250px;
 
   ${media.lessThan("medium")`
     /* screen width is less than 768px (medium) */
-    margin-top: 20px;
+    margin-top: 60px;
     margin-left: 0px;
+  `}
+
+  ${media.between("medium", "large")`
+    /* screen width is between 768px (medium) and 1170px (large) */
+    margin-top: 200px;
+    margin-left: 20%;
   `}
 `;
 
@@ -31,12 +37,7 @@ const RacoonImg = styled.img`
 
   ${media.lessThan("medium")`
     /* screen width is less than 768px (medium) */
-    display: none;
-  `}
-
-  ${media.between("medium", "large")`
-    /* screen width is between 768px (medium) and 1170px (large) */
-    max-width: 300px
+    display:none
   `}
 `;
 
@@ -56,7 +57,7 @@ const StyledLink = styled(Link)`
 
 export default function LandingPage() {
   return (
-    <Container component="main">
+    <>
       <Navbar />
       <WrapperLeft>
         <Heading h1>Reflect on your day.</Heading>
@@ -66,8 +67,8 @@ export default function LandingPage() {
         <StyledLink to="/components/SignUp">
           <Button label="Sign Up"> </Button>
         </StyledLink>
+        <RacoonImg src={Racoon} alt="Racoon Img" />
       </WrapperLeft>
-      <RacoonImg src={Racoon} alt="Racoon Img" />
-    </Container>
+    </>
   );
 }

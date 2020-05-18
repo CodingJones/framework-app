@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
+import media from "styled-media-query";
 
 const Wrapper = styled.div`
   align-items: center;
@@ -22,6 +23,13 @@ const SunImg = styled.img`
   max-width: 350px;
   left: 20px;
   top: 20px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    max-width: 25%;
+    left: 1%;
+    top: 1%;
+  `}
 `;
 
 const SunImg2 = styled.img`
@@ -29,11 +37,18 @@ const SunImg2 = styled.img`
   max-width: 300px;
   right: 20px;
   top: 40px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    max-width: 25%;
+    right: 1%;
+    top: 1%;
+  `}
 `;
 
 export default function Morning() {
   return (
-    <Container component="main" maxWidth="xs">
+    <>
       <Wrapper>
         <Heading h2>Good morning</Heading>
         <Heading h5>How do you feel today?</Heading>
@@ -57,6 +72,6 @@ export default function Morning() {
       <Helmet>
         <style>{"body {background: #eeeeee}"}</style>
       </Helmet>
-    </Container>
+    </>
   );
 }

@@ -3,9 +3,10 @@ import "../App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import InputBase from "@material-ui/core/InputBase";
 import styled from "styled-components";
+import media from "styled-media-query";
 
 const StyledInput = styled.div`
-  width: 500px;
+  width: 400px;
   margin-top: 20px;
   background: #edeff1;
   border: 1px solid #d9dbdf;
@@ -17,11 +18,16 @@ const StyledInput = styled.div`
     box-shadow: 0px 4px 20px #999;
     border-radius: 40px;
   }
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    max-width: 100%;
+  `}
 `;
 
 const useStyles = makeStyles((theme) => ({
   writeField: {
-    width: 400,
+    width: "80%",
     height: 150,
     alignItems: "center",
     textAlign: "center",
