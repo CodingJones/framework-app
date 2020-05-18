@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Container from "@material-ui/core/Container";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
@@ -21,13 +20,13 @@ export default function Morning() {
       <Wrapper>
         <Heading h2>Good morning</Heading>
         <Heading h5>Daily questions to make you feel better</Heading>
-        <Heading p>Write three things down that makes you happy?</Heading>
+        <Heading p>Write three things down that makes you happy!</Heading>
         <UserInput />
         <Heading p>How could you make someone smile today?</Heading>
         <UserInput />
         <Grid item xs={12}>
-          <Link to="/components/Todo">
-            <ButtonNext label="Next" />
+          <Link to="/components/EnjoyLife">
+            <ButtonNext label="Let's Go!" />
           </Link>
         </Grid>
         <Grid item xs={12}>

@@ -28,7 +28,7 @@ const StyledInput = styled.div`
 const useStyles = makeStyles((theme) => ({
   writeField: {
     width: "80%",
-    height: 150,
+    height: 100,
     alignItems: "center",
     textAlign: "center",
     fontSize: 16,
@@ -55,7 +55,7 @@ export function UserInput() {
           id="outlined-multiline-static"
           multiline
           inputProps={{ "aria-label": "naked" }}
-          rows={6}
+          rows={4}
         />
       </StyledInput>
     </div>

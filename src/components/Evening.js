@@ -3,15 +3,20 @@ import Container from "@material-ui/core/Container";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
-import { ButtonNext } from "./ButtonNext";
-import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
 import { SmileyRating } from "./SmileyRating";
 import { UserInput } from "./UserInput";
+import ButtonSleep from "./ButtonSleep";
+import ButtonEveningPrev from "./ButtonEveningPrev";
+import EveningImgs from "./EveningImgs";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
+`;
+
+const StyledLink = styled(Link)`
+  font-size: 18px;
 `;
 
 export default function Evening() {
@@ -26,22 +31,27 @@ export default function Evening() {
         </Heading>
         <SmileyRating />
         <Heading h5 primary>
-          Questions:
+          Recap and reflect on your day
         </Heading>
         <Heading p primary>
-          To make you reflect upon your life
+          How could the day have been better?
+        </Heading>
+        <UserInput />
+        <Heading p primary>
+          In what silly ways did you waste your time today?
         </Heading>
         <UserInput />
         <Grid item xs={12}>
-          <Link to="/components/Questions">
-            <ButtonNext label="Next" />
-          </Link>
+          <StyledLink to="/components/EnjoyLife">
+            <ButtonSleep label="Sleep Tight" />
+          </StyledLink>
         </Grid>
         <Grid item xs={12}>
-          <Link to="/components/Questions">
-            <ButtonPrev label="Previous" />
-          </Link>
+          <StyledLink to="/components/Choose">
+            <ButtonEveningPrev label="Previous" />
+          </StyledLink>
         </Grid>
+        <EveningImgs />
       </Wrapper>
     </Container>
   );
