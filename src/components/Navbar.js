@@ -61,10 +61,10 @@ export function Navbar() {
     <Nav>
       <NavHeader>
         <StyledLink to="/components/LogIn">
-          <NavLogIn> Log In </NavLogIn>
+          <NavLogIn>Log In</NavLogIn>
         </StyledLink>
         <StyledLink to="/components/SignUp">
-          <NavSignUp> Sign Up </NavSignUp>
+          <NavSignUp>Sign Up</NavSignUp>
         </StyledLink>
       </NavHeader>
     </Nav>

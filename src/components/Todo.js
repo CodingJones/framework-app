@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Sun from "../images/sun.png";
 import Sun2 from "../images/sun2.png";
-import { QuestionsInput } from "./QuestionsInput";
+import { SmileyRating } from "./SmileyRating";
+import { UserInput } from "./UserInput";
 import styled from "styled-components";
 import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
@@ -30,23 +31,21 @@ const SunImg2 = styled.img`
   top: 40px;
 `;
 
-export default function Morning() {
+export default function Todo() {
   return (
     <Container component="main" maxWidth="xs">
       <Wrapper>
         <Heading h2>Good morning</Heading>
-        <Heading h5>Daily questions to make you feel better</Heading>
-        <Heading p>Write three things down that makes you happy?</Heading>
-        <QuestionsInput />
-        <Heading p>How could you make someone smile today?</Heading>
-        <QuestionsInput />
+        <Heading h5>Todos for today:</Heading>
+        <Heading p>Make the best out of today</Heading>
+
         <Grid item xs={12}>
-          <Link to="/components/Todo">
+          <Link to="/components/Questions">
             <ButtonNext label="Next" />
           </Link>
         </Grid>
         <Grid item xs={12}>
-          <Link to="/components/Morning">
+          <Link to="/components/Choose">
             <ButtonPrev label="Previous" />
           </Link>
         </Grid>

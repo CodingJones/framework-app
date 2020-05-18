@@ -6,9 +6,8 @@ import SleepyRacoon from "../images/sleepyRacoon.png";
 import styled from "styled-components";
 import { CardContent } from "@material-ui/core";
 import Button from "./Button";
-import Card from "@material-ui/core/Card";
-import { makeStyles } from "@material-ui/core/styles";
 import Heading from "./Heading";
+import media from "styled-media-query";
 
 const Paper = styled.div`
   margin-top: 30px;
@@ -18,10 +17,15 @@ const Paper = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    margin-top: 0px;
+  `}
 `;
 
 const Form = styled.form`
-  width: "100%";
+  width: 100%;
 `;
 
 const SubHeader = styled.p`
@@ -39,6 +43,16 @@ const SleepyRacoonImg = styled.img`
   max-width: 400px;
   right: 0px;
   bottom: 0px;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    display: none;
+  `}
+
+  ${media.between("medium", "large")`
+    /* screen width is between 768px (medium) and 1170px (large) */
+    max-width: 300px;
+  `}
 `;
 
 const StyledLink = styled(Link)`
@@ -50,21 +64,26 @@ const StyledLinkButton = styled(Link)`
   font-size: 16px;
 `;
 
-const useStyles = makeStyles((theme) => ({
-  cardStyle: {
-    marginTop: 30,
-    paddingBottom: 30,
-    margin: "auto",
-    borderRadius: 40,
-    maxWidth: 400,
-  },
-}));
+const StyledCard = styled.div`
+  margin-top: 30px;
+  margin: auto;
+  border-radius: 40px;
+  width: 400px;
+  background-color: #e5e5e5;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    width: 100%;
+    border-radius: 0px;
+    margin-top; 0px;
+    background-color: #e5e5e5;
+  `}
+`;
 
 export default function SignUp() {
-  const styles = useStyles();
   return (
     <>
-      <Card className={styles.cardStyle}>
+      <StyledCard>
         <Paper>
           <CardContent>
             <Heading h3> Sign up Today! </Heading>
@@ -123,7 +142,7 @@ export default function SignUp() {
             </Form>
           </CardContent>
         </Paper>
-      </Card>
+      </StyledCard>
       <SleepyRacoonImg src={SleepyRacoon} alt="SleepyRacoonImg" />
     </>
   );

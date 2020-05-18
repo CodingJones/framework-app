@@ -6,21 +6,31 @@ import { Navbar } from "./Navbar";
 import Container from "@material-ui/core/Container";
 import styled from "styled-components";
 import Heading from "./Heading";
+import media from "styled-media-query";
 
 const WrapperLeft = styled.div`
-  position: absolute;
+  float: left;
   align-items: center;
   text-align: center;
-  margin-left: 200px;
-  margin-top: 180px;
+  margin-top: 120px;
 `;
 
 const RacoonImg = styled.img`
   position: absolute;
   right: 100px;
-  bottom: 100px;
+  bottom: 60px;
   max-width: 500px;
   border-radius: 100%;
+
+  ${media.lessThan("medium")`
+    /* screen width is less than 768px (medium) */
+    display: none;
+  `}
+
+  ${media.between("medium", "large")`
+    /* screen width is between 768px (medium) and 1170px (large) */
+    max-width: 300px
+  `}
 `;
 
 const StyledLink = styled(Link)`
