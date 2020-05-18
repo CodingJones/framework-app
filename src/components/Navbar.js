@@ -7,7 +7,7 @@ const Nav = styled.div`
   position: relative;
   float: right;
   text-align: center;
-  background-color: #0d47a1;
+  background: #003e75;
 `;
 
 const NavHeader = styled.div`
@@ -35,7 +35,7 @@ const NavLogIn = styled.div`
   font-size: 16px;
   padding: 10px 20px;
 
-  background: #0d47a1;
+  background: #003e75;
   color: #e5e5e5;
   border-style: none;
 

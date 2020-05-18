@@ -6,7 +6,7 @@ const NextButton = styled.button`
   width: 100px;
   height: 60px;
 
-  color: #0d47a1;
+  color: ${(props) => (props.primary ? "#0d47a1" : "#003e75")};
   text-transform: none;
 
   background: #eeeeee;

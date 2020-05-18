@@ -1,42 +1,48 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import React, { Component } from "react";
 import Container from "@material-ui/core/Container";
-import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
+import styled from "styled-components";
+import { ButtonNext } from "./ButtonNext";
+import { ButtonPrev } from "./ButtonPrev";
+import Heading from "./Heading";
+import { SmileyRating } from "./SmileyRating";
+import { UserInput } from "./UserInput";
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    marginTop: 20,
-    marginRight: 10,
-    marginLeft: 10,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-  },
-  continue: {
-    fontWeight: 400,
-    fontSize: 18,
-    fontFamily: "Helvetica Neue",
-    marginBottom: 40,
-    marginTop: 40,
-  },
-}));
+const Wrapper = styled.div`
+  align-items: center;
+  text-align: center;
+`;
 
 export default function Evening() {
-  const styles = useStyles();
   return (
     <Container component="main" maxWidth="xs">
-      <div className={styles.paper}>
-        <Typography>
-          <h1>Evening </h1>
-        </Typography>
-        <Grid container spacing={2}></Grid>
-      </div>
-      <Helmet>
-        <style>{"body {background: #eeeeee}"}</style>
-      </Helmet>
+      <Wrapper>
+        <Heading h2 primary>
+          Good Evening
+        </Heading>
+        <Heading h5 primary>
+          How would you rate your day?
+        </Heading>
+        <SmileyRating />
+        <Heading h5 primary>
+          Questions:
+        </Heading>
+        <Heading p primary>
+          To make you reflect upon your life
+        </Heading>
+        <UserInput />
+        <Grid item xs={12}>
+          <Link to="/components/Questions">
+            <ButtonNext label="Next" />
+          </Link>
+        </Grid>
+        <Grid item xs={12}>
+          <Link to="/components/Questions">
+            <ButtonPrev label="Previous" />
+          </Link>
+        </Grid>
+      </Wrapper>
     </Container>
   );
 }

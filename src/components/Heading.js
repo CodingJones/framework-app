@@ -25,14 +25,14 @@ const HeadingTwo = styled.h2`
   font-size: 26px;
   text-align: center;
   font-weight: 400;
-  color: #0d47a1;
+  color: ${(props) => (props.primary ? "#e5e5e5;" : "#003e75;")};
   margin-top: 40px;
   margin-bottom: 40px;
 `;
 
 const HeadingThree = styled.h3`
   font-size: 26px;
-  color: #0d47a1;
+  color: ${(props) => (props.primary ? "#e5e5e5;" : "#003e75;")};
   text-align: center;
   margin-top: 5px;
   font-weight: 350;
@@ -58,7 +58,7 @@ const HeadingFour = styled.h4`
 const HeadingFive = styled.h5`
   font-size: 18px;
   margin-bottom: 10px;
-  color: #0d47a1;
+  color: ${(props) => (props.primary ? "#e5e5e5;" : "#003e75;")};
   font-weight: 350;
   text-align: center;
   ${baseStyle};
@@ -68,7 +68,7 @@ const PageText = styled.p`
   font-size: 16px;
   font-weight: 300;
   text-align: center;
-  color: #0d47a1;
+  color: ${(props) => (props.primary ? "#e5e5e5;" : "#003e75;")};
   font-style: italic;
   margin-top: 20px;
   ${baseStyle};

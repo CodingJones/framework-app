@@ -7,7 +7,7 @@ import media from "styled-media-query";
 
 const StyledInput = styled.div`
   width: 400px;
-  margin-top: 20px;
+  margin-top: 0px;
   background: #edeff1;
   border: 1px solid #d9dbdf;
   box-sizing: border-box;

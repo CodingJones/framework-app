@@ -1,49 +1,18 @@
 import React, { Component } from "react";
-import Container from "@material-ui/core/Container";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Sun from "../images/sun.png";
-import Sun2 from "../images/sun2.png";
 import { SmileyRating } from "./SmileyRating";
 import { UserInput } from "./UserInput";
 import styled from "styled-components";
 import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
-import media from "styled-media-query";
+import SunImgs from "./SunImgs";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
-`;
-
-const SunImg = styled.img`
-  position: absolute;
-  max-width: 350px;
-  left: 20px;
-  top: 20px;
-
-  ${media.lessThan("medium")`
-    /* screen width is less than 768px (medium) */
-    max-width: 25%;
-    left: 1%;
-    top: 1%;
-  `}
-`;
-
-const SunImg2 = styled.img`
-  position: absolute;
-  max-width: 300px;
-  right: 20px;
-  top: 40px;
-
-  ${media.lessThan("medium")`
-    /* screen width is less than 768px (medium) */
-    max-width: 25%;
-    right: 1%;
-    top: 1%;
-  `}
 `;
 
 export default function Morning() {
@@ -67,8 +36,7 @@ export default function Morning() {
           </Link>
         </Grid>
       </Wrapper>
-      <SunImg src={Sun} alt="Sun img" />
-      <SunImg2 src={Sun2} alt="Sun2 img" />
+      <SunImgs />
       <Helmet>
         <style>{"body {background: #eeeeee}"}</style>
       </Helmet>
