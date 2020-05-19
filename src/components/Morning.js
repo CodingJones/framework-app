@@ -9,45 +9,40 @@ import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
 import SunImgs from "./SunImgs";
-import SignUp from "./SignUp";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
 `;
 
-export default class Morning extends Component {
-  onChangeName() {
-    this.props.firstName(this.state.value);
-  }
+const Morning = ({ value }) => {
+  return (
+    <>
+      <Wrapper>
+        <Heading h2>{value}</Heading>
+        <Heading h2>Good morning</Heading>
+        <Heading h5>How do you feel today?</Heading>
+        <SmileyRating />
+        <Heading h5>Monkey mind:</Heading>
+        <Heading p>Spend some minutes writing down your thoughts</Heading>
+        <UserInput />
+        <Grid item xs={12}>
+          <Link to="/components/Questions">
+            <ButtonNext label="Next" />
+          </Link>
+        </Grid>
+        <Grid item xs={12}>
+          <Link to="/components/Choose">
+            <ButtonPrev label="Previous" />
+          </Link>
+        </Grid>
+      </Wrapper>
+      <SunImgs />
+      <Helmet>
+        <style>{"body {background: #eeeeee}"}</style>
+      </Helmet>
+    </>
+  );
+};
 
-  render() {
-    return (
-      <>
-        <Wrapper>
-          <Heading h2>{this.state.firstName}</Heading>
-          <Heading h2>Good morning</Heading>
-          <Heading h5>How do you feel today?</Heading>
-          <SmileyRating />
-          <Heading h5>Monkey mind:</Heading>
-          <Heading p>Spend some minutes writing down your thoughts</Heading>
-          <UserInput />
-          <Grid item xs={12}>
-            <Link to="/components/Questions">
-              <ButtonNext label="Next" />
-            </Link>
-          </Grid>
-          <Grid item xs={12}>
-            <Link to="/components/Choose">
-              <ButtonPrev label="Previous" />
-            </Link>
-          </Grid>
-        </Wrapper>
-        <SunImgs />
-        <Helmet>
-          <style>{"body {background: #eeeeee}"}</style>
-        </Helmet>
-      </>
-    );
-  }
-}
+export default Morning;

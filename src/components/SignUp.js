@@ -89,13 +89,11 @@ export default class SignUp extends Component {
   }
 
   render() {
-    const { firstName } = this.state;
     return (
       <>
         <StyledCard>
           <Paper>
             <CardContent>
-              <Heading p>First name is: {firstName}</Heading>
               <Heading h3>Sign up Today!</Heading>
               <Grid item xs={12}>
                 <Heading p>

@@ -31,30 +31,13 @@ const Paper = styled.div`
 `;
 
 export default class LogIn extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    alert("A name was submitted: " + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
       <Container component="main" maxWidth="xs">
         <CardContent>
           <Paper>
             <Heading h3>Log in</Heading>
-            <form onSubmit={this.handleSubmit}>
+            <form>
               <TextField
                 variant="outlined"
                 margin="normal"
