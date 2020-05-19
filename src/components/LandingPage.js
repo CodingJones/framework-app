@@ -3,7 +3,6 @@ import Racoon from "../images/racoon.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import { Navbar } from "./Navbar";
-import Container from "@material-ui/core/Container";
 import styled from "styled-components";
 import Heading from "./Heading";
 import media from "styled-media-query";

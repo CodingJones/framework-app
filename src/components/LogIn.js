@@ -5,16 +5,11 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Button from "./Button";
 import Heading from "./Heading";
-
-const Form = styled.form`
-  width: "100%";
-`;
 
 const StyledLink = styled(Link)`
   font-size: 12px;
@@ -36,13 +31,30 @@ const Paper = styled.div`
 `;
 
 export default class LogIn extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert("A name was submitted: " + this.state.value);
+    event.preventDefault();
+  }
+
   render() {
     return (
       <Container component="main" maxWidth="xs">
         <CardContent>
           <Paper>
             <Heading h3>Log in</Heading>
-            <Form>
+            <form onSubmit={this.handleSubmit}>
               <TextField
                 variant="outlined"
                 margin="normal"
@@ -82,7 +94,7 @@ export default class LogIn extends Component {
                   <style>{"body {background: #eeeeee}"}</style>
                 </Helmet>
               </Grid>
-            </Form>
+            </form>
           </Paper>
         </CardContent>
       </Container>

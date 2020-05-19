@@ -20,7 +20,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/framework-app" component={LandingPage} />
         <Route path="/components/LogIn" component={LogIn} />
         <Route path="/components/SignUp" component={SignUp} />
         <Route path="/components/Choose" component={Choose} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
 import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
@@ -23,10 +23,6 @@ const Paper = styled.div`
     /* screen width is less than 768px (medium) */
     margin-top: 0px;
   `}
-`;
-
-const Form = styled.form`
-  width: 100%;
 `;
 
 const SleepyRacoonImg = styled.img`
@@ -72,70 +68,96 @@ const StyledCard = styled.div`
   `}
 `;
 
-export default function SignUp() {
-  return (
-    <>
-      <StyledCard>
-        <Paper>
-          <CardContent>
-            <Heading h3> Sign up Today! </Heading>
-            <Grid item xs={12}>
-              <Heading p>
-                Reflect is currently in an open Beta. <br /> Sign up to try it
-                out before the official release!
-              </Heading>
-            </Grid>
-            <Form>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="firstName"
-                    variant="outlined"
-                    fullWidth
-                    label="First Name"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Last Name"
-                    name="lastName"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Email"
-                    name="email"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    name="password"
-                    label="Password"
-                    type="password"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <StyledLinkButton to="/components/Choose">
-                    <Button label="Let's go!" />
-                  </StyledLinkButton>
-                </Grid>
-                <Grid item xs={12}>
-                  <StyledLink to="/components/LogIn">
-                    Already have an account? Log in!
-                  </StyledLink>
-                </Grid>
+export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { firstName: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = this.state;
+    console.log("Data is", data);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
+  }
+
+  render() {
+    const { firstName } = this.state;
+    return (
+      <>
+        <StyledCard>
+          <Paper>
+            <CardContent>
+              <Heading p>First name is: {firstName}</Heading>
+              <Heading h3>Sign up Today!</Heading>
+              <Grid item xs={12}>
+                <Heading p>
+                  Reflect is currently in an open Beta. <br /> Sign up to try it
+                  out before the official release!
+                </Heading>
               </Grid>
-            </Form>
-          </CardContent>
-        </Paper>
-      </StyledCard>
-      <SleepyRacoonImg src={SleepyRacoon} alt="SleepyRacoonImg" />
-    </>
-  );
+              <form onSubmit={this.handleSubmit}>
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="firstName"
+                      variant="outlined"
+                      fullWidth
+                      label="First Name"
+                      type="text"
+                      value={this.state.value}
+                      onChange={this.handleChange}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      label="Last Name"
+                      name="lastName"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      label="Email"
+                      name="email"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      variant="outlined"
+                      fullWidth
+                      name="password"
+                      label="Password"
+                      type="password"
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <StyledLinkButton to="/components/Choose">
+                      <Button label="Let's go!" />
+                    </StyledLinkButton>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <StyledLink to="/components/LogIn">
+                      Already have an account? Log in!
+                    </StyledLink>
+                  </Grid>
+                </Grid>
+              </form>
+            </CardContent>
+          </Paper>
+        </StyledCard>
+        <SleepyRacoonImg src={SleepyRacoon} alt="SleepyRacoonImg" />
+      </>
+    );
+  }
 }
