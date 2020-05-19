@@ -9,18 +9,18 @@ import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
 import SunImgs from "./SunImgs";
+import SignUp from "./SignUp";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
 `;
 
-const Morning = ({ value }) => {
+const Morning = (props) => {
   return (
     <>
       <Wrapper>
-        <Heading h2>{value}</Heading>
-        <Heading h2>Good morning</Heading>
+        <Heading h2>Good morning (firstName)</Heading>
         <Heading h5>How do you feel today?</Heading>
         <SmileyRating />
         <Heading h5>Monkey mind:</Heading>
