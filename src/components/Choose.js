@@ -31,10 +31,11 @@ const Pics = styled.img`
   `}
 `;
 
-export default function Choose() {
+const Choose = ({ data }) => {
   return (
     <Container component="main" maxWidth="md">
       <Paper>
+        <Heading h2>First name is: {data}</Heading>
         <Heading h2>Choose reflection</Heading>
         <Heading h5>
           <CurrentDate />
@@ -59,4 +60,6 @@ export default function Choose() {
       </Helmet>
     </Container>
   );
-}
+};
+
+export default Choose;

@@ -8,7 +8,6 @@ import { CardContent } from "@material-ui/core";
 import Button from "./Button";
 import Heading from "./Heading";
 import media from "styled-media-query";
-import Morning from "./Morning";
 
 const Paper = styled.div`
   margin-top: 30px;
