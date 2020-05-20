@@ -9,14 +9,13 @@ import { ButtonNext } from "./ButtonNext";
 import { ButtonPrev } from "./ButtonPrev";
 import Heading from "./Heading";
 import SunImgs from "./SunImgs";
-import SignUp from "./SignUp";
 
 const Wrapper = styled.div`
   align-items: center;
   text-align: center;
 `;
 
-const Morning = (props) => {
+const Morning = () => {
   return (
     <>
       <Wrapper>
