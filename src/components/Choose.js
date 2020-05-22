@@ -31,11 +31,11 @@ const Pics = styled.img`
   `}
 `;
 
-const Choose = ({ data }) => {
+const Choose = ({ props }) => {
   return (
     <Container component="main" maxWidth="md">
       <Paper>
-        <Heading h2>First name is: {data}</Heading>
+        <Heading h2>First name is: {props}</Heading>
         <Heading h2>Choose reflection</Heading>
         <Heading h5>
           <CurrentDate />
@@ -45,13 +45,13 @@ const Choose = ({ data }) => {
             <Link to="/components/Morning">
               <Pics src={Morning} alt="Morning img" />
             </Link>
-            <Heading h2>Morning rutine </Heading>
+            <Heading h2>Morning routine </Heading>
           </Grid>
           <Grid xs={12} sm={6}>
             <Link to="/components/Evening">
               <Pics src={Evening} alt="Evening img" />
             </Link>
-            <Heading h2>Evening rutine</Heading>
+            <Heading h2>Evening routine</Heading>
           </Grid>
         </Grid>
       </Paper>

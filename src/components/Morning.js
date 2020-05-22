@@ -15,11 +15,11 @@ const Wrapper = styled.div`
   text-align: center;
 `;
 
-const Morning = () => {
+const Morning = ({ props }) => {
   return (
     <>
       <Wrapper>
-        <Heading h2>Good morning (firstName)</Heading>
+        <Heading h2>Good morning {props}</Heading>
         <Heading h5>How do you feel today?</Heading>
         <SmileyRating />
         <Heading h5>Monkey mind:</Heading>
