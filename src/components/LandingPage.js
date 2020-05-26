@@ -22,21 +22,28 @@ const WrapperLeft = styled.div`
 
   ${media.between("medium", "large")`
     /* screen width is between 768px (medium) and 1170px (large) */
-    margin-top: 200px;
+    margin-top: 100px;
     margin-left: 20%;
   `}
 `;
 
 const RacoonImg = styled.img`
   position: absolute;
-  right: 100px;
-  bottom: 60px;
-  max-width: 500px;
+  right: 40px;
+  bottom: 20px;
+  max-width: 400px;
   border-radius: 100%;
 
   ${media.lessThan("medium")`
     /* screen width is less than 768px (medium) */
     display:none
+  `}
+
+  ${media.between("medium", "large")`
+    /* screen width is between 768px (medium) and 1170px (large) */
+    width: 30%;
+    right: 20px;
+    bottom: 10px;
   `}
 `;
 

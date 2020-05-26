@@ -20,10 +20,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/framework-app" component={LandingPage} />
         <Route path="/components/LogIn" component={LogIn} />
-        <Route
-          path="/components/SignUp"
-          render={(props) => <SignUp {...props} isAuthed={true} />}
-        />
+        <Route path="/components/SignUp" component={SignUp} />
         <Route path="/components/Choose" component={Choose} />
         <Route path="/components/Morning" component={Morning} />
         <Route path="/components/Evening" component={Evening} />

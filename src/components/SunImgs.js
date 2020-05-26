@@ -6,7 +6,7 @@ import Sun2 from "../images/sun2.png";
 
 const SunImg = styled.img`
   position: absolute;
-  max-width: 350px;
+  max-width: 300px;
   left: 20px;
   top: 20px;
 
