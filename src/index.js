@@ -18,10 +18,13 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/framework-app" component={LandingPage} />
+        <Route exact path="/" component={LandingPage} />
         <Route path="/components/LogIn" component={LogIn} />
         <Route path="/components/SignUp" component={SignUp} />
-        <Route path="/components/Choose" component={Choose} />
+        <Route
+          path="/components/Choose/:firstName"
+          render={(props) => <Choose {...props} />}
+        />
         <Route path="/components/Morning" component={Morning} />
         <Route path="/components/Evening" component={Evening} />
         <Route path="/components/Questions" component={Questions} />

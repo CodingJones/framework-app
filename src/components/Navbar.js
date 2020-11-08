@@ -20,7 +20,6 @@ const NavHeader = styled.div`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-
   &:focus,
   &:hover,
   &:visited,
@@ -34,11 +33,9 @@ const NavLogIn = styled.div`
   font-family: "Helvetica Neue";
   font-size: 16px;
   padding: 10px 20px;
-
   background: #003e75;
   color: #e5e5e5;
   border-style: none;
-
   &:hover {
     color: #bebebe;
   }
@@ -49,7 +46,6 @@ const NavSignUp = styled.div`
   border: 1px solid #e5e5e5;
   padding: 10px 25px;
   border-radius: 30px;
-
   &:hover {
     color: #bebebe;
     border: 1px solid #bebebe;

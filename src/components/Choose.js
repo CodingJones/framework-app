@@ -31,11 +31,13 @@ const Pics = styled.img`
   `}
 `;
 
-const Choose = () => {
+const Choose = (props) => {
+  const { firstName } = props.match.params;
+
   return (
     <Container component="main" maxWidth="md">
       <Paper>
-        <Heading h2>Choose reflection</Heading>
+        <Heading h2> Hi {firstName}, choose reflection</Heading>
         <Heading h5>
           <CurrentDate />
         </Heading>

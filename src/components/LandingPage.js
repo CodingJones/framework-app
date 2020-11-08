@@ -71,7 +71,7 @@ export default function LandingPage() {
           Reflect daily with questions, calm your thinking, organize your life.
         </Heading>
         <StyledLink to="/components/SignUp">
-          <Button label="Sign Up"> </Button>
+          <Button label="Sign Up" />
         </StyledLink>
         <RacoonImg src={Racoon} alt="Racoon Img" />
       </WrapperLeft>

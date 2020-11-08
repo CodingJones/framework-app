@@ -140,7 +140,9 @@ export default class SignUp extends Component {
                     />
                   </Grid>
                   <Grid item xs={12}>
-                    <StyledLinkButton to="/components/Choose">
+                    <StyledLinkButton
+                      to={`/components/Choose/${this.state.firstName}`}
+                    >
                       <Button label="Let's go!" />
                     </StyledLinkButton>
                   </Grid>
